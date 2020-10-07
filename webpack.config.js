@@ -49,12 +49,9 @@ module.exports = {
       filename: 'assets/[name].css',
     }),
   ],
-  
-    // DEV SERVER ENTRY POINT
-    devServer: {
-      contentBase: path.resolve(__dirname, "./src"),
-      port: 3500,
-      watchContentBase: true,
-      open: true
-    }
+
+  // DEV SERVER ENTRY POINT
+  devServer: {
+    historyApiFallback: true,
+  },
 };

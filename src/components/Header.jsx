@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../styles/components/Header.styl';
 
-const Header = (props) => (
+const Header = props => (
   <div className="Container">
     <div className="Header">
       <h1 className="Header-title">
@@ -15,18 +15,15 @@ const Header = (props) => (
         <Link to="/checkout">
           <i className="fas fa-shopping-basket" />
         </Link>
-        {props.cart.length > 0 && (
-          <div className="Header-alert">{props.cart.length}</div>
-        )}
+        <div className="Header-alert">{props.cart.length}</div>
       </div>
     </div>
   </div>
 );
 
-
-const mapStateToProps =  state =>{
-  return{
-    cart: state.cart
-  }
-}
-export default connect(mapStateToProps)( Header);
+const mapStateToProps = state => {
+  return {
+    cart: state.cart,
+  };
+};
+export default connect(mapStateToProps)(Header);

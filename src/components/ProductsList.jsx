@@ -36,3 +36,5 @@ const mapDispatchToProps = {
   addToCart: actions.addToCart,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);
+
+
